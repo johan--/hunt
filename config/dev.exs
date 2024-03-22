@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :hunt, Hunt.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "jpwf_usr",
+  password: "jpwfPass",
   hostname: "localhost",
   database: "hunt_dev",
   stacktrace: true,

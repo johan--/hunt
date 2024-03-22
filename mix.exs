@@ -32,7 +32,7 @@ defmodule Hunt.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.7.7"},
+      {:phoenix, "~> 1.7.10"},
       {:phoenix_ecto, "~> 4.4"},
       {:ecto_sql, "~> 3.10"},
       {:postgrex, ">= 0.0.0"},
@@ -51,7 +51,8 @@ defmodule Hunt.MixProject do
       {:ueberauth_google, "~> 0.10"},
       {:faker, "~> 0.17", only: [:dev, :test]},
       {:dns_cluster, "~> 0.1.0"},
-      {:joken, "~> 2.6.0"}
+      {:joken, "~> 2.6.0"},
+      {:dotenvy, "~> 0.6.0"}
     ]
   end
 

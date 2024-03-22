@@ -13,6 +13,19 @@ config :hunt,
   supered_jwt_url: "http://localhost:4000/jwt/hunt",
   supered_jwt_secret: "local-only"
 
+config :ueberauth, Ueberauth,
+  providers: [
+    google:
+      {Ueberauth.Strategy.Google,
+       [
+         default_scope: "email profile"
+       ]}
+  ]
+
+config :ueberauth, Ueberauth.Strategy.Google.OAuth,
+  client_id: {System, :get_env, ["GOOGLE_CLIENT_ID"]},
+  client_secret: {System, :get_env, ["GOOGLE_CLIENT_SECRET"]}
+
 # Configures the endpoint
 config :hunt, HuntWeb.Endpoint,
   url: [host: "localhost"],
